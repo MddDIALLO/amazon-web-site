@@ -47,7 +47,11 @@
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary">
+          <button class="js-add-to-cart add-to-cart-button button-primary"
+          data-product-id="${product.id}"
+          data-product-name="${product.name}"
+          data-product-image="${product.image}"
+          data-product-price="${(product.priceCents / 100).toFixed(2)}">
             Add to Cart
           </button>
         </div>
@@ -56,3 +60,31 @@
 
     document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
+    document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+      button.addEventListener('click', () => {;
+        const productId = button.dataset.productId
+        const productName = button.dataset.productName;
+        const productImage = button.dataset.productImage;
+        const productPrice = button.dataset.productPrice;
+
+        let matchingItem;
+        cart.forEach((item) => {
+          if(productId === item.productId) {
+            matchingItem = item;
+          }
+        });
+
+        if(matchingItem) {
+          matchingItem.quantity += 1;
+        } else {
+          cart.push({
+            productId: productId,
+            productName: productName,
+            productImage: productImage,
+            productPrice: productPrice,
+            quantity: 1
+          })
+        }
+        console.log(cart);
+      })
+    })
