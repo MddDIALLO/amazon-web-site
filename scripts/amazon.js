@@ -22,12 +22,12 @@
           </div>
 
           <div class="product-price">
-            $${(product.priceCents / 100).toFixed(2)}
+            ${(product.priceCents / 100).toFixed(2)}
           </div>
 
           <div class="product-quantity-container">
-            <select>
-              <option selected value="1">1</option>
+            <select id="my-select" class="js-quantity-selector-${product.id}" data-testid="quantity-selector">
+              <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -60,12 +60,28 @@
 
     document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
+    let selectedValue = 0;
+    /*document.querySelectorAll('.js-quantity-selector').forEach((select) => {
+      select.addEventListener('change', () => {
+        const selectBox = select.value;
+        selectedValue = Number(selectBox);
+      })
+    });*/
+
+    function resetSelector() {
+      select = document.querySelector(`.js-quantity-selector-${product.id}`);
+        select.value = '1';
+    }
+
     document.querySelectorAll('.js-add-to-cart').forEach((button) => {
       button.addEventListener('click', () => {
         const productId = button.dataset.productId
         const productName = button.dataset.productName;
         const productImage = button.dataset.productImage;
         const productPrice = button.dataset.productPrice;
+
+        select = document.querySelector(`.js-quantity-selector-${product.id}`);
+        selectedValue = Number(select.value);
 
         let matchingItem;
         cart.forEach((item) => {
@@ -75,16 +91,17 @@
         });
 
         if(matchingItem) {
-          matchingItem.quantity += 1;
+          matchingItem.quantity += selectedValue;
         } else {
           cart.push({
             productId: productId,
             productName: productName,
             productImage: productImage,
             productPrice: productPrice,
-            quantity: 1
+            quantity: selectedValue
           })
         }
+        resetSelector();
 
         let cartQuantity = 0;
 
