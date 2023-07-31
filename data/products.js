@@ -1,4 +1,214 @@
-const products = [
+export const products = [
+  {
+    id: "id1",
+    image: "images/products/bascket.jpg",
+    name: "Basckets",
+    rating: {
+      stars: 4.5,
+      count: 55
+    },
+    priceCents: 4599,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id2",
+    image: "images/products/casques.jpg",
+    name: "Casques",
+    rating: {
+      stars: 5,
+      count: 34
+    },
+    priceCents: 2599,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id3",
+    image: "images/products/Chaussures.jpg",
+    name: "Chaussures",
+    rating: {
+      stars: 5,
+      count: 876
+    },
+    priceCents: 7599,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id4",
+    image: "images/products/culotte.jpg",
+    name: "Culotte",
+    rating: {
+      stars: 4,
+      count: 394
+    },
+    priceCents: 1099,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id5",
+    image: "images/products/ecobee.jpg",
+    name: "Ecobee",
+    rating: {
+      stars: 5,
+      count: 345
+    },
+    priceCents: 2299,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id6",
+    image: "images/products/ecouteurs.jpg",
+    name: "Ecouteurs",
+    rating: {
+      stars: 3.5,
+      count: 234
+    },
+    priceCents: 999,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id7",
+    image: "images/products/Electronic.jpg",
+    name: "Electronics",
+    rating: {
+      stars: 5,
+      count: 334
+    },
+    priceCents: 899,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id8",
+    image: "images/products/fauteuil.jpg",
+    name: "Fauteuils",
+    rating: {
+      stars: 5,
+      count: 734
+    },
+    priceCents: 12595,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id9",
+    image: "images/products/gopro.jpg",
+    name: "Gopro",
+    rating: {
+      stars: 3,
+      count: 234
+    },
+    priceCents: 1299,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id10",
+    image: "images/products/manteau.jpg",
+    name: "Manteau",
+    rating: {
+      stars: 5,
+      count: 934
+    },
+    priceCents: 7799,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id11",
+    image: "images/products/montre.jpg",
+    name: "Montre",
+    rating: {
+      stars: 5,
+      count: 3784
+    },
+    priceCents: 12099,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "id12",
+    image: "images/products/pc.jpg",
+    name: "PC",
+    rating: {
+      stars: 4,
+      count: 458
+    },
+    priceCents: 49999,
+    keywords: [
+      "pc",
+      "electronic",
+      "appareil"
+    ]
+  },
+  {
+    id: "id13",
+    image: "images/products/sac.jpg",
+    name: "SAC",
+    rating: {
+      stars: 3.5,
+      count: 978
+    },
+    priceCents: 1299,
+    keywords: [
+      "sac",
+      "bag",
+      "school"
+    ]
+  },
+  {
+    id: "id4",
+    image: "images/products/Tshirt.jpg",
+    name: "Tshirt",
+    rating: {
+      stars: 5,
+      count: 1334
+    },
+    priceCents: 1599,
+    keywords: [
+      "tshirt",
+      "sports",
+      "body"
+    ]
+  },
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
